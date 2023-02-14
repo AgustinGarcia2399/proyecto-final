@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#navBar{
+    display: flex;
+    background: rgb(255,175,0);
+    background: linear-gradient(41deg, rgba(255,175,0,0.63) 0%, rgba(245,245,208,1) 35%, rgba(245,245,208,1) 73%, rgba(255,175,0,1) 100%);
+    margin: 40px 20px;
+    border-radius: 10px;
+    align-items:center;
+    box-shadow:3px 1px 10px black;
+    padding: 10px;
+    height: 100px;
+}
+
+#logo:hover{
+    cursor: pointer;
+}
+
+
+#wolf{
+    font-size: 20px;
+    font-weight: bold;
+    float: right;
+    margin: 30px -10px;
+    padding: 0px 20px;
+    filter: drop-shadow(2px 2px 5px black);
+    transform: translate(-15px);
+    letter-spacing: 4px;
+
+}
+img{
+    height: 80px;
+    width: 80px;
+    filter: drop-shadow(2px 2px 2px black);
+    transform:rotateX(180deg);
+    transform: rotateY(180deg);
+}
+
+#categorias{
+    font-size: 20px;
+    flex-grow: 2;
+}
+
+
+.categoria{
+    display:  inline-grid;
+    margin: 0px 20px;
+    transition: .2s;
+    font-weight: none;
+}
+
+
+a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: .1s;
+}
+
+a:hover{
+    color: #000;
+    text-decoration-style:solid ;
+    text-decoration: underline #000;
+    font-size: 22px;
+}
+
+#logo{
+    min-width: 180px;
+}

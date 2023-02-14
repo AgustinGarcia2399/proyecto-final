@@ -1,0 +1,30 @@
+#cart{
+    background-image: url(../CartWidget/carrito.png);
+    background-size:cover;
+    height: 30px;
+    width: 30px;
+    transition: .3s;
+    padding: 5px;
+}
+
+#cantidad{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 5px;
+
+}
+
+
+#cart:hover{
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+
+.carro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
