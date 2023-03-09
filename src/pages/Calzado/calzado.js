@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 
 
 import { db } from '../../firebase/firebaseConfig';
-import {collection, query, where, getDocs, documentId} from "firebase/firestore"
+import {collection, query, where, getDocs} from "firebase/firestore"
 
-const Pantalones = () => {
+const Calzado = () => {
 
     const[clothes,setClothes] = useState([]);
     let {id} = useParams();
@@ -16,7 +16,7 @@ const Pantalones = () => {
 
     useEffect(()=>{
         const getClothes = async ()=>{
-            const q = query(collection(db, "clothes"),where("categoria","==","pantalones"));
+            const q = query(collection(db, "clothes"),where("categoria","==","calzado"));
             const querySnapshot = await getDocs(q);
             const docs=[];
             querySnapshot.forEach((doc) => {
@@ -27,10 +27,9 @@ const Pantalones = () => {
         getClothes();
     },[id])
 
-
     return(
         <div>
-            <h1>PANTALONES</h1>
+            <h1>CALZADOS</h1>
                 <div id='listContainer'>
                         {clothes.map((cloth)=>{
                             return (
@@ -48,4 +47,4 @@ const Pantalones = () => {
     )
 }
 
-export default Pantalones;
+export default Calzado;

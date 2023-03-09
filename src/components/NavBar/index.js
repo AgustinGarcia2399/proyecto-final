@@ -9,15 +9,15 @@ const NavBar = ({carrito}) => {
             <div id='logo'>
                 <NavLink to="/">
                 <img src={logo} alt='logo'/>
-                <p id='wolf'>The Wolf</p>
+                <p>The Wolf</p>
                 </NavLink>
             </div>
-            <div  id="categorias">
-                <ul>
-                    <li className='categoria'><NavLink to="/remeras">REMERAS</NavLink></li>
-                    <li className='categoria'><NavLink to="/pantalones">PANTALONES</NavLink></li>
-                    <li className='categoria'><NavLink to="/zapatos">ZAPATOS</NavLink></li>
-                    <li className='categoria'><NavLink to="/sombreros">SOMBREROS</NavLink></li>
+            <div id="categorias">
+                <ul className='filter'>
+                    <li><NavLink to="/remeras">REMERAS</NavLink></li>
+                    <li><NavLink to="/pantalones">PANTALONES</NavLink></li>
+                    <li><NavLink to="/calzado" >CALZADOS</NavLink></li>
+                    <li><NavLink to="/gorras">GORRAS</NavLink></li>
                 </ul>
             </div>
             {carrito}

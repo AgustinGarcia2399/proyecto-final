@@ -1,15 +1,33 @@
 #listContainer{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    border: 2px solid black;
-    margin: 20px;
-    border-radius: 10px;
-    background-color: rgba(255, 174, 0, 0.322);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 50px;
+    row-gap: 40px;
+    padding:20px 20px;
+
 }
 .objeto{
-    margin: 20px;
     transition: .5s;
 }
 .objeto:hover{
-    transform: translate(0px,-10px)
+    transform:translateY(-10px)
 }
+h1{
+    font-size: 35px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+#prend{
+    display: inline-flex;
+    background-color: #fff;
+    color:#000
+}
+
+#apag{
+    display: inline-flex;
+    background-color: #000;
+    color:#fff
+}
+

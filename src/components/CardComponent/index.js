@@ -4,19 +4,22 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
-const CardComponent = ({users}) => {
+
+const CardComponent = ({clothes}) => {
+
+
   return (
-    <Card sx={{ maxWidth : 300 }}>
+    <Card>
       <CardMedia
-        sx={{ height: 300 , width:300 }}
-        image={users.avatar_url}
+        sx={{objectFit: "contain", height:"200px"}}
+        image={clothes.img}
+        component='img'
       />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {users.login}
+      <CardContent >
+        <Typography gutterBottom variant="h5" component="div" fontSize="20px" >
+          {clothes.titulo}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Aqui va a estar la descripcion del objeto
         </Typography>
       </CardContent>
     </Card>

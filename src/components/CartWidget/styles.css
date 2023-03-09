@@ -10,16 +10,20 @@
 #cantidad{
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
     padding: 5px;
+}
 
+#compra{
+    flex-grow: 1;
+    display: grid;
+    place-items: center;
 }
 
 
 #cart:hover{
     cursor: pointer;
-    height: 40px;
-    width: 40px;
+    transform: scale(1.4) translateX(-7px);
+
 }
 
 .carro{

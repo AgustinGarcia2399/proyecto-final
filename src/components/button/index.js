@@ -1,12 +1,20 @@
 import React from 'react';
 
+const styles ={
+    btn:{
+        backgroundColor:"#ddd",
+        width:"100px",
+        height:"20px",
+        border:"1px solid black"
+    }
+}
 
 
-const Button = ({onClick, children}) => {
+const ButtonAdd = ({onClick}) => {
 
     return(
-        <button onClick={onClick}>{children}</button>
+        <button style = {styles.btn} onClick={onClick}>Agregar</button>
     )
 }
 
-export default Button;
+export default ButtonAdd;

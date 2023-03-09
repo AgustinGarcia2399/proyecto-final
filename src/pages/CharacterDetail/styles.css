@@ -1,4 +1,11 @@
-#fondo{
+.articulo img{
+    object-fit:contain;
+    width: 200px;
+    height: 200px;
+}
+
+.articulo{
     display: flex;
+    align-items: center;
     justify-content: center;
 }

@@ -3,7 +3,7 @@ import ItemListCointainer from '../../components/ItemListContainer';
 
 
 
-const Home = () => {
+const Home = ({onClick}) => {
 
     return(
         <div>
