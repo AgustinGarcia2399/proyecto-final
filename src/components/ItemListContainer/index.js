@@ -14,10 +14,6 @@ const ItemListCointainer = ({titulo}) =>{
     const[clothes,setClothes] = useState([]);
 
 
-    const [hola,setHola] = useState(true);
-    const [prendido,setPrendido] = useState(true);
-
-
 
     useEffect(()=>{
         const getClothes = async ()=>{
@@ -36,9 +32,6 @@ const ItemListCointainer = ({titulo}) =>{
             <>  
                 <h1>{titulo}</h1>
                 <p>Items: {clothes.length}</p>
-                <div id={prendido?"prend":"apag"}>{ hola ?"Hola Mundo":"Chau Mundo"}</div>
-                <button onClick={()=>setHola(!hola)}>Cambiar saludo</button>
-                <button onClick={()=>setPrendido(!prendido)}>Cambiar estilo</button>
                 
                 <div id='listContainer'>
                         {clothes.map((cloth)=>{

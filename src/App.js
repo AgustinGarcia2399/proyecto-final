@@ -14,24 +14,22 @@ import Calzado from './pages/Calzado/calzado';
 import Pantalones from './pages/Pantalones/pantalones';
 import Gorras from './pages/Gorras/gorras';
 import CharacterDetail from './pages/CharacterDetail/characterdetail';
+import Cart from './pages/Cart/cart';
 
 const App = () => {
-  const [items,setItems] = useState(0);
 
-  const handleClick = ()=>{
-    setItems(items+1);
-  }
 
   return (
     <BrowserRouter>
       <div className="App">
-        <NavBar carrito={<CartWidget cantidadItems={items}/>}/>
+        <NavBar carrito={<CartWidget/>}/>
         <Routes>
-          <Route path="/" element={<Home onClick={handleClick}/>}/>
+          <Route path="/" element={<Home/>}/>
           <Route path="/remeras" element={<Remeras/>}/>
           <Route path="/pantalones" element={<Pantalones/>}/>
           <Route path="/calzado" element={<Calzado/>}/>
           <Route path="/gorras" element={<Gorras/>}/>
+          <Route path="/carro" element={<Cart/>}/>
           <Route path="/detail/:id" element={<CharacterDetail/>}/>
         </Routes>
       </div>

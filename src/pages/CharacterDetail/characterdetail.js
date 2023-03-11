@@ -35,24 +35,41 @@ const CharacterDetail = () => {
         <div>
             {clothes.map((cloth)=>{
                 return (
-                    <div className='articulo'>
-                        <img src={cloth.img} alt='articulo'/>
-                        <p>Precio: US$ {cloth.precio} </p>
-                        <p>Stock: {cloth.stock} </p>
-                        <button onClick={()=>dispatch(increment())}>+</button>
-                        <span>{valor}</span>
-                        <button onClick={()=>{
-                            if(valor > 0){
-                                dispatch(decrement())}
-                            }}>-</button>
-                        <button onClick={()=>{
-                            if(valor > cloth.stock){
-                                alert("No se puede")
-                            }else{
-                            dispatch(add(valor));
-                            dispatch(clear());
-                            }
-                            }}>Agregar</button>
+                    <div key={cloth.id}>
+                        <h1> {cloth.titulo} </h1>
+                        <div className='articulo' >
+                            <img src={cloth.img} alt='articulo'/>
+                                <div className='data_container'>
+                                    <div className='pys_container'>
+                                        <p>Precio: US$ {cloth.precio} </p>
+                                        <p className='stock'>Stock: {cloth.stock} </p>
+                                    </div>
+                                    <p>Cantidad:</p>
+                                    <div className='botones_container'>
+                                        <button className='mas' onClick={()=>{
+                                            if(valor < cloth.stock){
+                                                dispatch(increment())}
+                                            }}>
+                                            +</button>
+                                        <span>{valor}</span>
+                                        <button className='menos' onClick={()=>{
+                                            if(valor > 0){
+                                                dispatch(decrement())}
+                                            }}>-</button>
+                                    </div>
+                                        <button className='agregar' onClick={()=>{
+                                            if(valor > cloth.stock){
+                                                alert("Cantidad invalida")
+                                            }else{
+                                                for(let i=0; i<valor;i++){
+                                                    dispatch(add(cloth));
+                                                }
+                                                dispatch(clear());
+                                            }
+                                            }}>Agregar al carrito
+                                        </button>
+                                </div>
+                        </div>
                     </div>
                 )
     
